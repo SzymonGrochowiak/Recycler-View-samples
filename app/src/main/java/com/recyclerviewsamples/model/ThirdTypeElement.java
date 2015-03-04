@@ -3,7 +3,7 @@ package com.recyclerviewsamples.model;
 /**
  * @author Szymon Grochowiak
  */
-public class ThirdTypeElement {
+public class ThirdTypeElement implements RecyclerElement {
 
     private int mSeekBarValue;
     private int mSeekBarMaxValue;

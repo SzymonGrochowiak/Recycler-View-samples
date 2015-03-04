@@ -8,7 +8,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.recyclerviewsamples.adpaters.MultipleViewTypeAdapter;
+import com.recyclerviewsamples.model.FirstTypeElement;
 import com.recyclerviewsamples.model.RecyclerElement;
+import com.recyclerviewsamples.model.SecondTypeElement;
+import com.recyclerviewsamples.model.ThirdTypeElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +30,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
+        initSampleList();
 
         mRecyclerView.setHasFixedSize(true);
 
@@ -55,6 +60,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void initSampleList() {
-
+        mElementList.add(new FirstTypeElement("Sample text for first type view",
+                "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
+        mElementList.add(new SecondTypeElement("Sample text for second type view"));
+        mElementList.add(new SecondTypeElement("Another sample text for second type view"));
+        mElementList.add(new SecondTypeElement("And one more"));
+        mElementList.add(new FirstTypeElement("Some text!!!", "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
+        mElementList.add(new ThirdTypeElement(25, 100));
     }
 }
