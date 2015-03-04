@@ -8,6 +8,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.recyclerviewsamples.adpaters.MultipleViewTypeAdapter;
+import com.recyclerviewsamples.model.RecyclerElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,9 +19,7 @@ public class MainActivity extends ActionBarActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
-    public MainActivity() {
-    }
+    private List<RecyclerElement> mElementList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,5 +52,9 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void initSampleList() {
+
     }
 }
