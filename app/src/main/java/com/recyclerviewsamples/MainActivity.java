@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new MultipleViewTypeAdapter();
+        mAdapter = new MultipleViewTypeAdapter(mElementList, this);
         mRecyclerView.setAdapter(mAdapter);
     }
 
@@ -67,5 +67,8 @@ public class MainActivity extends ActionBarActivity {
         mElementList.add(new SecondTypeElement("And one more"));
         mElementList.add(new FirstTypeElement("Some text!!!", "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
         mElementList.add(new ThirdTypeElement(25, 100));
+        mElementList.add(new FirstTypeElement("Some text!!!", "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
+        mElementList.add(new ThirdTypeElement(45, 100));
+        mElementList.add(new ThirdTypeElement(75, 100));
     }
 }
