@@ -67,7 +67,7 @@ public class MainActivity extends ActionBarActivity {
         mElementList.add(new SecondTypeElement("And one more"));
         mElementList.add(new FirstTypeElement("Some text!!!", "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
         mElementList.add(new ThirdTypeElement(25, 100));
-        mElementList.add(new FirstTypeElement("Some text!!!", "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
+        mElementList.add(new FirstTypeElement("Some text!!!", "http://www.dogtownmedia.com/wp-content/uploads/2013/08/android_download.png"));
         mElementList.add(new ThirdTypeElement(45, 100));
         mElementList.add(new ThirdTypeElement(75, 100));
     }
