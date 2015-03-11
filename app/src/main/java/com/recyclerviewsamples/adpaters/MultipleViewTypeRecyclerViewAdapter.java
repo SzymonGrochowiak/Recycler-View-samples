@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * @author Szymon Grochowiak
  */
-public class MultipleViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MultipleViewTypeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private static final int ITEM_TYPE_FIRST = 1;
     private static final int ITEM_TYPE_SECOND = 2;
@@ -65,7 +65,7 @@ public class MultipleViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.V
         }
     }
 
-    public MultipleViewTypeAdapter(List<RecyclerElement> recyclerElementList, Context context) {
+    public MultipleViewTypeRecyclerViewAdapter(List<RecyclerElement> recyclerElementList, Context context) {
         mRecyclerElementList = recyclerElementList;
         mContext = context;
         mLayoutInflater = LayoutInflater.from(mContext);

@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.recyclerviewsamples.adpaters.MultipleViewTypeAdapter;
+import com.recyclerviewsamples.adpaters.MultipleViewTypeRecyclerViewAdapter;
 import com.recyclerviewsamples.model.FirstTypeElement;
 import com.recyclerviewsamples.model.RecyclerElement;
 import com.recyclerviewsamples.model.SecondTypeElement;
@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new MultipleViewTypeAdapter(mElementList, this);
+        mAdapter = new MultipleViewTypeRecyclerViewAdapter(mElementList, this);
         mRecyclerView.setAdapter(mAdapter);
     }
 
