@@ -31,7 +31,10 @@ public class MainActivity extends ActionBarActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-        initSampleList();
+        addElementsToSampleList();
+        addElementsToSampleList();
+        addElementsToSampleList();
+        addElementsToSampleList();
 
         mRecyclerView.setHasFixedSize(true);
 
@@ -59,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void initSampleList() {
+    private void addElementsToSampleList() {
         mElementList.add(new FirstTypeElement("Sample text for first type view",
                 "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
         mElementList.add(new SecondTypeElement("Sample text for second type view"));
@@ -70,5 +73,6 @@ public class MainActivity extends ActionBarActivity {
         mElementList.add(new FirstTypeElement("Some text!!!", "http://www.dogtownmedia.com/wp-content/uploads/2013/08/android_download.png"));
         mElementList.add(new ThirdTypeElement(45, 100));
         mElementList.add(new ThirdTypeElement(75, 100));
+        mElementList.add(new FirstTypeElement("Some text!!!", "http://www.dogtownmedia.com/wp-content/uploads/2013/08/android_download.png"));
     }
 }
