@@ -19,6 +19,8 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 /**
+ * This sample presents how to create a recycler view with several types of rows.
+ *
  * @author Szymon Grochowiak
  */
 public class MultipleViewTypeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
