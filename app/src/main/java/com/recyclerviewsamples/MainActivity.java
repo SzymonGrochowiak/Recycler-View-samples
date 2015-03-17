@@ -1,11 +1,14 @@
 package com.recyclerviewsamples;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.recyclerviewsamples.adpaters.MultipleViewTypeRecyclerViewAdapter;
 import com.recyclerviewsamples.model.FirstTypeElement;
@@ -19,30 +22,21 @@ import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private List<RecyclerElement> mElementList = new ArrayList<>();
+    private TextView multipleViewTypeTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
-        addElementsToSampleList();
-        addElementsToSampleList();
-        addElementsToSampleList();
-        addElementsToSampleList();
-
-        mRecyclerView.setHasFixedSize(true);
-
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
-        mAdapter = new MultipleViewTypeRecyclerViewAdapter(mElementList, this);
-        mRecyclerView.setAdapter(mAdapter);
+        multipleViewTypeTextView = (TextView) findViewById(R.id.multipleViewTypeTextView);
+        multipleViewTypeTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -60,19 +54,5 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    private void addElementsToSampleList() {
-        mElementList.add(new FirstTypeElement("Sample text for first type view",
-                "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
-        mElementList.add(new SecondTypeElement("Sample text for second type view"));
-        mElementList.add(new SecondTypeElement("Another sample text for second type view"));
-        mElementList.add(new SecondTypeElement("And one more"));
-        mElementList.add(new FirstTypeElement("Some text!!!", "http://i3.kym-cdn.com/photos/images/original/000/406/325/b31.jpg"));
-        mElementList.add(new ThirdTypeElement(25, 100));
-        mElementList.add(new FirstTypeElement("Some text!!!", "http://i2.kym-cdn.com/photos/images/newsfeed/000/406/325/b31.jpg"));
-        mElementList.add(new ThirdTypeElement(45, 100));
-        mElementList.add(new ThirdTypeElement(75, 100));
-        mElementList.add(new FirstTypeElement("Some text!!!", "http://i2.kym-cdn.com/photos/images/newsfeed/000/406/325/b31.jpg"));
     }
 }
